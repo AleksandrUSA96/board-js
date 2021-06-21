@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Monoton', cursive;
+}
+
+body {
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    flex-direction: column;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 48px;
+    font-weight: 100;
+    color: #7b46e2;
+    margin: 0;
+    text-shadow: 5px -2px 3px #00ff6a, 0px 0px 1em #04ff00;
+    overflow: hidden;
+    border-right: 2px solid #7b46e2;
+    white-space: nowrap;
+    letter-spacing: .25em;
+    transition: text-shadow .3s ease-in-out;
+    animation: typing 4s steps(16, end), blink__caret 1s step-end infinite, change__color 4s infinite;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    flex-wrap: wrap;
+}
+
+.square {
+    width: 32px;
+    height: 32px;
+    background-color: #1d1d1d;
+    margin: 2px;
+    box-shadow: 0 0 2px #000;
+    transition: 2s ease;
+}
+
+.square:hover {
+    transition-duration: 0s;
+}
+
+@keyframes change__color {
+    from {
+        text-shadow: 5px -2px 3px #00ff6a, 12px -3px 0.5em #04ff00;
+        transition: text-shadow .3s ease-in-out;
+    }
+    25% {
+        text-shadow: 5px -2px 3px #7200ff, 12px -3px 0.5em #0400ff;
+        transition: text-shadow .3s ease-in-out;
+    }
+    50% {
+        text-shadow: 5px -2px 3px #ff0000, 12px -3px 0.5em #ff00e0;
+        transition: text-shadow .3s ease-in-out;
+    }
+    75% {
+        text-shadow: 5px -2px 3px #00ffc8, 12px -3px 0.5em #e4ff00;
+        transition: text-shadow .3s ease-in-out;
+    }
+    to {
+        text-shadow: 5px -2px 3px #00ff6a, 12px -3px 0.5em #04ff00;
+        transition: text-shadow .3s ease-in-out;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 691px
+    }
+}
+
+@keyframes blink__caret {
+    from, to {
+        border-color: transparent
+    }
+    50% {
+        border-color: #7b46e2
+    }
+}
